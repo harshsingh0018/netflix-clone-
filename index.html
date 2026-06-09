@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone (Demo)</title>
+
+  <!-- Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="loader-spinner">
+      <div class="loader-circle"></div>
+      <div class="loader-text">LOADING</div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#top">
+        <span>NET</span><span style="color: var(--text-primary)">FLIX</span>
+      </a>
+
+      <div class="search-container">
+        <input id="searchInput" class="search-input" type="text" placeholder="Search titles..." autocomplete="off" />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link active" href="#series">Series</a></li>
+          <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#new">New</a></li>
+        </ul>
+      </nav>
+
+      <div class="profile-avatar" role="button" tabindex="0" aria-label="Profile">
+        <img
+          src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=60"
+          alt="Profile"
+        />
+        <div class="dropdown-menu" aria-label="Profile menu">
+          <p>👤 Account</p>
+          <p>⭐ Favorites</p>
+          <p>🚪 Logout</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="hero-banner">
+    <div
+      class="hero-background"
+      style="background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1600&q=60');"
+    ></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Stranger Things</h1>
+      <p class="hero-description">
+        A Netflix-style demo UI. Search, slide, and click a movie to see interactions.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-play" type="button">▶ Play</button>
+        <button class="btn btn-info" type="button">ℹ More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="content-container">
+    <!-- SERIES SECTION -->
+    <section id="series" class="movie-section">
+      <h2 class="section-title"><i>★</i> Trending Series</h2>
+
+      <div class="slider-container">
+        <button class="slider-btn slider-btn-prev" type="button" aria-label="Scroll left">‹</button>
+        <div class="movie-row" aria-label="Movie slider">
+          <!-- Movie Card 1 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1511290740045-9f2a7f8c7a5a?auto=format&fit=crop&w=600&q=60"
+                alt="Stranger Things"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Drama • Fantasy • Horror</h3>
+                  <div class="movie-details">
+                    <h4>Stranger Things</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.7</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 2 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1535639432963-4fbf8d0d3fe8?auto=format&fit=crop&w=600&q=60"
+                alt="The Witcher"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Action • Adventure</h3>
+                  <div class="movie-details">
+                    <h4>The Witcher</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.2</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 3 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1517604931442-7e0c74f8f5b9?auto=format&fit=crop&w=600&q=60"
+                alt="Dark"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Time • Mystery • Drama</h3>
+                  <div class="movie-details">
+                    <h4>Dark</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.6</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 4 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=600&q=60"
+                alt="Better Call Saul"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Crime • Drama</h3>
+                  <div class="movie-details">
+                    <h4>Better Call Saul</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.9</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 5 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=60"
+                alt="Money Heist"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Thriller • Crime</h3>
+                  <div class="movie-details">
+                    <h4>Money Heist</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.3</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 6 -->
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=600&q=60"
+                alt="The Crown"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button" aria-label="Play">▶</button>
+                <div class="movie-info">
+                  <h3>Historical • Drama</h3>
+                  <div class="movie-details">
+                    <h4>The Crown</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.7</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn slider-btn-next" type="button" aria-label="Scroll right">›</button>
+      </div>
+    </section>
+
+    <!-- MOVIES SECTION -->
+    <section id="movies" class="movie-section">
+      <h2 class="section-title"><i>🎬</i> Movies</h2>
+
+      <div class="slider-container">
+        <button class="slider-btn slider-btn-prev" type="button" aria-label="Scroll left">‹</button>
+        <div class="movie-row">
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1505682634909-3cbbf8b2a7f1?auto=format&fit=crop&w=600&q=60"
+                alt="Movie One"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Action • Sci‑Fi</h3>
+                  <div class="movie-details">
+                    <h4>Movie One</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.0</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1522364726634-8fbc5b1b0b0d?auto=format&fit=crop&w=600&q=60"
+                alt="Movie Two"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Adventure • Fantasy</h3>
+                  <div class="movie-details">
+                    <h4>Movie Two</h4>
+                    <div class="movie-rating">
+                      <span class="rating">7.9</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=60"
+                alt="Movie Three"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Thriller • Mystery</h3>
+                  <div class="movie-details">
+                    <h4>Movie Three</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.4</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=600&q=60"
+                alt="Movie Four"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Comedy • Drama</h3>
+                  <div class="movie-details">
+                    <h4>Movie Four</h4>
+                    <div class="movie-rating">
+                      <span class="rating">7.7</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=600&q=60"
+                alt="Movie Five"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Drama • Romance</h3>
+                  <div class="movie-details">
+                    <h4>Movie Five</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.1</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1502920917128-1aa500764b0d?auto=format&fit=crop&w=600&q=60"
+                alt="Movie Six"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>Horror • Thriller</h3>
+                  <div class="movie-details">
+                    <h4>Movie Six</h4>
+                    <div class="movie-rating">
+                      <span class="rating">7.8</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn slider-btn-next" type="button" aria-label="Scroll right">›</button>
+      </div>
+    </section>
+
+    <!-- NEW SECTION -->
+    <section id="new" class="movie-section">
+      <h2 class="section-title"><i>✨</i> New Releases</h2>
+
+      <div class="slider-container">
+        <button class="slider-btn slider-btn-prev" type="button" aria-label="Scroll left">‹</button>
+        <div class="movie-row">
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=60"
+                alt="New One"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>New • Mystery</h3>
+                  <div class="movie-details">
+                    <h4>New One</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.5</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=60"
+                alt="New Two"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>New • Comedy</h3>
+                  <div class="movie-details">
+                    <h4>New Two</h4>
+                    <div class="movie-rating">
+                      <span class="rating">7.6</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1526401485004-2aa6b3d7e2e0?auto=format&fit=crop&w=600&q=60"
+                alt="New Three"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>New • Action</h3>
+                  <div class="movie-details">
+                    <h4>New Three</h4>
+                    <div class="movie-rating">
+                      <span class="rating">8.1</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <div class="movie-image">
+              <img
+                data-src="https://images.unsplash.com/photo-1517602480517-8a3c9c3d5f3b?auto=format&fit=crop&w=600&q=60"
+                alt="New Four"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              />
+              <div class="movie-overlay">
+                <button class="play-button" type="button">▶</button>
+                <div class="movie-info">
+                  <h3>New • Drama</h3>
+                  <div class="movie-details">
+                    <h4>New Four</h4>
+                    <div class="movie-rating">
+                      <span class="rating">7.8</span><span class="votes">/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn slider-btn-next" type="button" aria-label="Scroll right">›</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#top">Company</a></li>
+          <li><a href="#top">Careers</a></li>
+          <li><a href="#top">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#top">Support</a></li>
+          <li><a href="#top">FAQ</a></li>
+          <li><a href="#top">Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow</h4>
+        <div class="social-links">
+          <a href="#top" aria-label="Twitter">𝕏</a>
+          <a href="#top" aria-label="Instagram">⌁</a>
+          <a href="#top" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Netflix Clone Demo
+    </div>
+  </footer>
+
+  <script defer>
+    // Footer year convenience
+    const el = document.getElementById('year');
+    if (el) el.textContent = new Date().getFullYear();
+  </script>
+  <script defer src="./script.js"></script>
+</body>
+</html>
+
